@@ -32,7 +32,7 @@ public class BookController {
 		book.setAuthor("Robert C. Martin");
 		book.setImageUrl("http://localhost/image");
 		
-		return new ResponseEntity<Book>(HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<Book>(book, HttpStatus.OK);
 	}
 	@PostMapping
 	public String createBook() {
