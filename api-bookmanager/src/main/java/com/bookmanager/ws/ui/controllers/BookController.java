@@ -36,6 +36,10 @@ public class BookController {
 	@GetMapping(path="/{isbn}")
 	public ResponseEntity<Book> getBook(@PathVariable String isbn) {
 		
+		String title = null;
+		
+		int titleLenth = title.length();
+		
 		if(books.containsKey(isbn)) {
 			return new ResponseEntity<Book>(books.get(isbn), HttpStatus.OK);
 		}else {
